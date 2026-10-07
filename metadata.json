@@ -1,0 +1,6 @@
+{
+  "name": "Northdemy",
+  "description": "Technology hub in Northern Nigeria empowering innovation, digital skills, and tech entrepreneurship.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

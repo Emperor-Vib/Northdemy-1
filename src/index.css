@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #060709;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom font smoothing and selection */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Transfer text gradient matching reference */
+.transfer-headline {
+  background: linear-gradient(92deg, #ffffff 0%, #ffffff 46%, #b4cdfe 62%, #5b8aff 78%, #2960f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Futuristic laser scroll glow */
+.laser-scroll-line {
+  box-shadow: 0 0 10px #38bdf8, 0 0 20px #2563eb, 0 0 35px #6366f1;
+}
+
+/* Futuristic card spotlight sheen */
+.futuristic-card {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.futuristic-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(59,130,246,0.3), rgba(255,255,255,0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.futuristic-card:hover::before {
+  opacity: 1;
+  background: linear-gradient(135deg, rgba(96,165,250,0.6), rgba(59,130,246,0.5), rgba(168,85,247,0.3));
+}
+
+/* Futuristic luminous button sheen */
+.cyber-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cyber-button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: all 0.65s ease;
+  pointer-events: none;
+}
+.cyber-button:hover::after {
+  left: 140%;
+}
